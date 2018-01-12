@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8"> 
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Abel|Open+Sans|Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="main.css" type="text/css">
+        <link rel="stylesheet" href="weather-icons/css/weather-icons.min.css" type="text/css">
+    </head>
+    <body>
+        <div class="bg">
+        <!-- Time Tag-->
+        <div class="row">
+            <div>
+                <h2 style="text-align:left" id="time">06:39</h2>
+            </div>
+            <div>
+                <h3 style="text-align:right" id="weather">
+                    <span class="wi" id="conditions"></span>
+                    <span id="temperature"></span>
+                </h3>
+                <h4 style="text-align:right" id="location">Sydney</h4>
+            </div>
+        </div>
+        <!-- Big Text -->
+        <h1 style="text-align:center">保持好奇心</h1>
+        <div class="row">
+            <div class="">
+            </div>
+            <div id="main-body" class="middle">
+                <form method="get" style="text-align: center" action="http://google.com/search">
+                    <!-- Search Box -->
+                    <input autofocus type="text" id="search-box" name="q"></input><br />
+                    <input type="submit" class="button" value="Explore"></input>
+                </form>
+            </div>
+            <div class="">
+            </div>
+        </div>
+        </div>
+        <script src="config.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>

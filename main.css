@@ -1,0 +1,135 @@
+body, html{
+    height: 100%;
+    margin: 0;
+    position: relative;
+    background-image: url("backgrounds/central-park.jpg");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.button{
+    background: rgb(22, 22, 22);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    opacity: 0.5;
+    padding: 5px 40px;
+    transition: 300ms;
+}
+
+.button:hover{
+    border: 1px solid black;
+    box-shadow: 1px 1px 2px #333333;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+h1{
+    color: white;
+    font-family: 'Microsoft YaHei', sans-serif;
+    font-size: 97px;
+    font-weight: normal;
+    letter-spacing: 3px;
+    margin: 8% 0 0 0;
+    opacity: 0.85;
+    animation: flyin 0.8s ease-out forwards;
+}
+
+h2, h3, h4{
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    opacity: 0.9;
+}
+
+h2{
+    font-size: 60px;
+    margin: -4px 8px;
+}
+
+h3{
+    font-size: 35px;
+    margin: 2px 10px 0px 0;
+}
+
+h4{
+    font-size: 18px;
+    margin: -2px 10px 8px 0;
+}
+
+.row{
+    display: flex;
+}
+
+.row div{
+    flex: 1;
+    margin: 0;
+}
+
+.row .middle{
+    flex: 2.3;
+}
+
+@media(max-width: 1200px){
+    .row .middle{
+        flex: 3;
+    }
+}
+
+@media(max-width: 960px){
+    .row .middle{
+        flex: 6;
+    }
+}
+
+@media(max-width: 480px){
+    .row .middle{
+        flex: 12;
+    }
+}
+
+#search-box{
+    background: #ffffffa4;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px #333333;
+    caret-color: rgb(24, 24, 24);
+    color: rgb(24, 24, 24);
+    font-family: 'Abel', sans-serif;
+    font-size: 38px;
+    font-weight: bold;
+    height: 60px;
+    margin: 3% 0px 25px 0px;
+    opacity: 0.5;
+    padding: 2px 7px;
+    transition: 150ms;
+    width: 95%;
+}
+
+#search-box:focus{
+    box-shadow: 3px 3px 4px #080808;
+    opacity: 0.9;
+    outline: none;
+}
+
+#search-box:hover{
+    opacity: 0.9;
+}
+
+#temperature{
+    margin: 0;
+    padding: 0;
+}
+
+/*/★·.·´¯`·.·★  ANIMATIONS  ★·.·´¯`·.·★/*/
+
+@keyframes flyin{
+    0% {letter-spacing: 15px;
+    opacity: 0;}
+    100% {letter-spacing: 3px;
+    opacity: 0.85;}
+}

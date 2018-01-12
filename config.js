@@ -1,0 +1,1 @@
+var apiKey = "YOUR OPEN WEATHER MAP API KEY";
