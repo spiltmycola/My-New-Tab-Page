@@ -1,5 +1,5 @@
 # My-New-Tab-Page
-Custom new tab page displaying time, weather and generating placeholder questions
+Responsive custom new tab page displaying time, weather and generating placeholder questions
 
 To Use:
 - Get a OpenWeatherMap API Key
