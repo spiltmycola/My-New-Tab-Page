@@ -6,6 +6,63 @@ var temperatureTag = document.getElementById("temperature");
 
 var weather;
 
+var questions = ["How do I get to Mars?",
+    "How big is Jupiter?",
+    "What's at the edge of the universe?",
+    "Chicken or egg?",
+    "Why do we have to sleep?",
+    "Why do cats always land on their feet?",
+    "What's the longest river on Earth?",
+    "How wide is the solar system?",
+    "Why isn't Pluto a planet?",
+    "Why is sunset red?",
+    "Why is the sky blue?",
+    "Where are the aliens?",
+    "Do ghosts exist?",
+    "Where is the nearest galaxy?",
+    "Where is the nearest galaxy?",
+    "What is love?",
+    "What is the meaning of life?",
+    "What happens when I die?",
+    "When will the world end?",
+    "How small is an atom?",
+    "How hot is the sun?",
+    "How far is the moon?",
+    "When did humans first emerge?",
+    "When was the wheel invented?",
+    "When was the industrial revolution?",
+    "What is dark energy?",
+    "How did life begin?",
+    "Are we alone in the universe?",
+    "What is consciousness?",
+    "What does my dream mean?",
+    "Is there a multiverse?",
+    "Is time-travel possible?",
+    "Where's my robot butler?",
+    "What's inside a black hole?",
+    "Can we live forever?",
+    "What makes us human?"
+];
+
+var bgImages = [
+    ["url('backgrounds/galaxy.jpg')",""],
+    ["url('backgrounds/graphicine_chris_foss.jpg')",""],
+    ["url('backgrounds/diggers_chris_foss.jpg')",""],
+    ["url('backgrounds/cave-entrance.jpg')",""],
+    ["url('backgrounds/hong-kong-skyline.jpeg')","center"],
+    ["url('backgrounds/central-park.jpg')","center"],
+    ["url('backgrounds/globe_quote.jpg')",""],
+    ["url('backgrounds/green-canyon.jpg')",""],
+    ["url('backgrounds/rain-bokeh.jpg')",""],
+    ["url('backgrounds/luoping.jpg')",""],
+    ["url('backgrounds/yellow-green_field.jpg')",""],
+    ["url('backgrounds/french-castle.jpg')",""],
+    ["url('backgrounds/totoro.jpg')","center top"],
+    ["url('backgrounds/moving-castle.jpg')",""],
+    ["url('backgrounds/colony.jpg')",""],
+    ["url('backgrounds/departure.jpg')","center bottom"]
+];
+
 window.onload = function(){
     setBackground();
     setTime();
@@ -25,175 +82,14 @@ function setTime(){
 }
 
 function setBackground(){
-    var rand = Math.floor(Math.random() * 16);
-    switch (rand){
-        case 0:
-            bodyTag.style.backgroundImage = "url('backgrounds/galaxy.jpg')";
-            break;
-        case 1:
-            bodyTag.style.backgroundImage = "url('backgrounds/graphicine_chris_foss.jpg')";
-            break;
-        case 2:
-            bodyTag.style.backgroundImage = "url('backgrounds/diggers_chris_foss.jpg')";
-            break;
-        case 3:
-            bodyTag.style.backgroundImage = "url('backgrounds/cave-entrance.jpg')";
-            break;
-        case 4:
-            bodyTag.style.backgroundImage = "url('backgrounds/hong-kong-skyline.jpeg')";
-            bodyTag.style.backgroundPosition = "center";
-            break;
-        case 5:
-            bodyTag.style.backgroundImage = "url('backgrounds/central-park.jpg')";
-            bodyTag.style.backgroundPosition = "center";
-            break;
-        case 6:
-            bodyTag.style.backgroundImage = "url('backgrounds/globe_quote.jpg')";
-            break;
-        case 7:
-            bodyTag.style.backgroundImage = "url('backgrounds/green-canyon.jpg')";
-            break;
-        case 8:
-            bodyTag.style.backgroundImage = "url('backgrounds/rain-bokeh.jpg')";
-            break;
-        case 9:
-            bodyTag.style.backgroundImage = "url('backgrounds/luoping.jpg')";
-            break;
-        case 10:
-            bodyTag.style.backgroundImage = "url('backgrounds/yellow-green_field.jpg')";
-            break;
-        case 11:
-            bodyTag.style.backgroundImage = "url('backgrounds/french-castle.jpg')";
-            break;
-        case 12:
-            bodyTag.style.backgroundImage = "url('backgrounds/totoro.jpg')";
-            bodyTag.style.backgroundPosition = "center top";
-            break;
-        case 13:
-            bodyTag.style.backgroundImage = "url('backgrounds/moving-castle.jpg')";
-            break;
-        case 14:
-            bodyTag.style.backgroundImage = "url('backgrounds/colony.jpg')";
-            break;
-        case 15:
-            bodyTag.style.backgroundImage = "url('backgrounds/departure.jpg')";
-            bodyTag.style.backgroundPosition = "center bottom";
-            break;
-    }
+    var rand = Math.floor(Math.random() * bgImages.length);
+    bodyTag.style.backgroundImage = bgImages[rand][0];
+    bodyTag.style.backgroundPosition = bgImages[rand][1];
 }
 
 function setPlaceholder(){
-    var rand = Math.floor(Math.random() * 36);
-    switch (rand){
-        case 0:
-            animateText("How do I get to Mars?");
-            break;
-        case 1:
-            animateText("How big is Jupiter?");
-            break;
-        case 2:
-            animateText("What's at the edge of the universe?");
-            break;
-        case 3:
-            animateText("Chicken or egg?");
-            break;
-        case 4:
-            animateText("Why do we have to sleep?");
-            break;
-        case 5:
-            animateText("Why do cats always land on their feet?");
-            break;
-        case 6:
-            animateText("What's the longest river on Earth?");
-            break;
-        case 7:
-            animateText("How wide is the solar system?");
-            break;
-        case 8:
-            animateText("Why isn't Pluto a planet?");
-            break;
-        case 9:
-            animateText("Why is sunset red?");
-            break;
-        case 10:
-            animateText("Why is the sky blue?");
-            break;
-        case 11:
-            animateText("Where are the aliens?");
-            break;
-        case 12:
-            animateText("Do ghosts exist?");
-            break;
-        case 13:
-            animateText("Where is the nearest galaxy?");
-            break;
-        case 14:
-            animateText("Where is the nearest galaxy?");
-            break;
-        case 15:
-            animateText("What is love?");
-            break;
-        case 16:
-            animateText("What is the meaning of life?");
-            break;
-        case 17:
-            animateText("What happens when I die?");
-            break;
-        case 18:
-            animateText("When will the world end?");
-            break;
-        case 19:
-            animateText("How small is an atom?");
-            break;
-        case 20:
-            animateText("How hot is the sun?");
-            break;
-        case 21:
-            animateText("How far is the moon?");
-            break;
-        case 22:
-            animateText("When did humans first emerge?");
-            break;
-        case 23:
-            animateText("When was the wheel invented?");
-            break;
-        case 24:
-            animateText("When was the industrial revolution?");
-            break;
-        case 25:
-            animateText("What is dark energy?");
-            break;
-        case 26:
-            animateText("How did life begin?");
-            break;
-        case 27:
-            animateText("Are we alone in the universe?");
-            break;
-        case 28:
-            animateText("What is consciousness?");
-            break;
-        case 29:
-            animateText("What does my dream mean?");
-            break;
-        case 30:
-            animateText("Is there a multiverse?");
-            break;
-        case 31:
-            animateText("Is time-travel possible?");
-            break;
-        case 32:
-            animateText("Where's my robot butler?");
-            break;
-        case 33:
-            animateText("What's inside a black hole?");
-            break;
-        case 34:
-            animateText("Can we live forever?");
-            break;
-        case 35:
-            animateText("What makes us human?");
-            break;
-    }
+    var rand = Math.floor(Math.random() * questions.length);
+    animateText(questions[rand]);
 }
 
 function setWeather(){
