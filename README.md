@@ -8,7 +8,7 @@ To Use:
 4. Check 'Developer Mode' if not already checked
 5. Click 'Load unpacked extension...' and select the folder with the new tab page
   
-To change pictures and text, edit 'main.js'. I just use random variables and switch-case statements so it should be pretty easy.
+To change pictures and text, edit 'main.js'. There is an array for questions and 2D array for backgrounds, [i][0] for link of source and [i][1] for position, e.g. "center top" else leave blank "".
   
 Note:
 - 'manifest.json' and instructions above are made for Google Chrome. Look elsewhere for how to use on other browsers.
